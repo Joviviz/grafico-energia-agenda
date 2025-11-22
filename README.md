@@ -1,16 +1,77 @@
-# React + Vite
+# Gerenciador de Blocos de Energia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um aplicativo Web interativo construído com React para gerenciar e visualizar seus níveis de energia ao longo do dia.
 
-Currently, two official plugins are available:
+A ideia baseia-se no gerenciamento do ritmo circadiano, permitindo planejar momentos de foco total ("Deep Work"), tarefas administrativas e descanso em blocos de 30 minutos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+É possível importar arquivos .csv com sua rotina e após editá-los, baixá-los.
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Visualização Gráfica: Um gráfico de barras que mostra o fluxo de energia do seu dia.
 
-## Expanding the ESLint configuration
+- Edição Granular: Ajuste o nível de energia (1 a 10) para cada bloco de 30 minutos (00:00 às 23:30).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Cores Dinâmicas:
+
+🟣 1-3: Descanso / Sono
+
+🔵 4-6: Manutenção / Rotina
+
+🟠 7-8: Foco Alto
+
+🔴 9-10: Pico de Produtividade
+
+Importação e Exportação:
+
+
+
+## Como Rodar o Projeto
+
+Pré-requisitos
+
+Você precisa ter o Node.js instalado no seu computador.
+
+Passo a Passo
+
+Clone o repositório
+
+git clone [https://github.com/Joviviz/grafico-energia-agenda.git](https://github.com/Joviviz/grafico-energia-agenda.git)
+cd agenda-energia
+
+
+Instale as dependências
+
+npm install
+
+
+Inicie o servidor de desenvolvimento
+
+npm run dev
+
+
+Acesse no navegador
+O terminal mostrará um link, geralmente: http://localhost:5173
+
+🛠️ Tecnologias Utilizadas
+
+React: Biblioteca para construção da interface.
+
+Vite: Ferramenta de build rápida.
+
+Tailwind CSS: Framework de estilização utilitária.
+
+Lucide React: Biblioteca de ícones leves e modernos.
+
+## Formato do Arquivo CSV
+
+O aplicativo aceita e gera arquivos CSV simples. Se você quiser criar um arquivo manualmente no Excel ou Bloco de Notas para importar, siga este padrão:
+
+Horario,Nivel_Energia
+07:00,8
+07:30,9
+08:00,10
+...
+
+
+Nota: O importador ignora a linha de cabeçalho se ela começar com "Horario" e foca nas duas primeiras colunas (Tempo e Nível).
