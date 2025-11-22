@@ -28,50 +28,33 @@ Importação e Exportação:
 
 ## Como Rodar o Projeto
 
-Pré-requisitos
+### Pré-requisitos
 
 Você precisa ter o Node.js instalado no seu computador.
 
-Passo a Passo
+### Passo a Passo
 
-Clone o repositório
+1 - Instale as dependências
 
-git clone [https://github.com/Joviviz/grafico-energia-agenda.git](https://github.com/Joviviz/grafico-energia-agenda.git)
-cd agenda-energia
-
-
-Instale as dependências
-
+```bash
 npm install
+```
 
+2 - Inicie o servidor de desenvolvimento
 
-Inicie o servidor de desenvolvimento
-
+```bash
 npm run dev
-
-
-Acesse no navegador
-O terminal mostrará um link, geralmente: http://localhost:5173
-
-🛠️ Tecnologias Utilizadas
-
-React: Biblioteca para construção da interface.
-
-Vite: Ferramenta de build rápida.
-
-Tailwind CSS: Framework de estilização utilitária.
-
-Lucide React: Biblioteca de ícones leves e modernos.
+```
 
 ## Formato do Arquivo CSV
 
 O aplicativo aceita e gera arquivos CSV simples. Se você quiser criar um arquivo manualmente no Excel ou Bloco de Notas para importar, siga este padrão:
 
-Horario,Nivel_Energia
-07:00,8
-07:30,9
-08:00,10
+Horario | Nivel_Energia| 
+| -     | -            |
+07:00   | 8
+07:30   | 9
+08:00   | 10
 ...
-
 
 Nota: O importador ignora a linha de cabeçalho se ela começar com "Horario" e foca nas duas primeiras colunas (Tempo e Nível).
